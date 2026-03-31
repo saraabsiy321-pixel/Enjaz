@@ -1,0 +1,136 @@
+.page-contact {
+  background: var(--page-bg);
+  padding: clamp(20px, 4vw, 40px) 0 48px;
+}
+
+.contact-page {
+  display: grid;
+  gap: 32px;
+}
+
+.contact-hero__panel {
+  min-height: 560px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 24px;
+  align-items: center;
+  padding: clamp(24px, 5vw, 40px);
+  border-radius: 28px;
+  background-image: linear-gradient(
+      90deg,
+      rgba(31, 32, 32, 0.08) 0%,
+      rgba(31, 32, 32, 0.08) 44%,
+      rgba(31, 32, 32, 0.18) 64%,
+      rgba(31, 32, 32, 0.56) 100%
+    ),
+    url("./img/Gemini_Generated_Image_hbjd4hhbjd4hhbjd.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.contact-hero__card {
+  justify-self: end;
+  width: min(100%, 560px);
+  display: grid;
+  gap: 18px;
+}
+
+.contact-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 12px 18px;
+  border: 1px solid rgba(69, 90, 100, 0.28);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.88);
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.85fr) minmax(320px, 1.15fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.contact-details__intro {
+  display: grid;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+.contact-details__intro h2 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.contact-details__intro p {
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.contact-details__card {
+  display: grid;
+  gap: 14px;
+}
+
+.contact-item {
+  display: grid;
+  gap: 6px;
+  padding: 18px 20px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(69, 90, 100, 0.14);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-1px);
+  border-color: rgba(69, 90, 100, 0.32);
+}
+
+.contact-item__label {
+  color: var(--brand);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.contact-item__value {
+  color: var(--ink);
+  font-size: clamp(20px, 2.4vw, 26px);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+@media (max-width: 960px) {
+  .contact-hero__panel {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .contact-hero__spacer {
+    display: none;
+  }
+
+  .contact-hero__card {
+    justify-self: stretch;
+  }
+
+  .contact-details {
+    grid-template-columns: 1fr;
+  }
+}
